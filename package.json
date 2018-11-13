@@ -1,0 +1,18 @@
+{
+  "name": "learn-functional-programming",
+  "version": "1.0.0",
+  "description": "Learn Functional Programming",
+  "main": "./src/index.js",
+  "author": "Tung Dang",
+  "license": "ISC",
+  "scripts": {
+    "start": "browser-sync src -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
