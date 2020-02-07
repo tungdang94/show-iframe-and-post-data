@@ -1,7 +1,7 @@
 {
-  "name": "sacombank-testing",
+  "name": "show-iframe-and-post-data",
   "version": "1.0.0",
-  "description": "Sacombank Testing",
+  "description": "Show iFrame And Post Data To Server",
   "main": "./src/index.js",
   "author": "Tung Dang",
   "license": "ISC",

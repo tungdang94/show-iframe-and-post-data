@@ -1,31 +1,17 @@
-$(document).ready(function() {
-  $("#btn-link-bank").click(function() {
-    var message = $("textarea#request").val();
-    var request = $.parseJSON(message);
-    console.log(request);
+function createIframe() {
+  var payload = document.getElementById("payload").value;
+  payload = payload.replace(/\\r\\n/g, "");
+  payload = payload.replace(/\\/g, "");
 
-    var form_data = new FormData();
+  // Initial iframe
+  var iframe = document.createElement("iframe");
+  iframe.setAttribute("id", "my-iframe"); // assign an id
 
-    for (var key in request) {
-      form_data.append(key, request[key]);
-    }
+  // Set position
+  document.getElementById("wrapper").innerHTML = "";
+  document.getElementById("wrapper").appendChild(iframe);
 
-    $.ajax({
-      type: "POST",
-      url: "https://cardtest.sacombank.com.vn:9448/checkout/stbCheckout",
-      processData: false,
-      contentType: false,
-      headers: {
-        Accept:
-          "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-      },
-      data: form_data,
-      success: function(result) {
-        console.log(result);
-      },
-      error: function(err) {
-        console.log(err);
-      }
-    });
-  });
-});
+  // Set iframe properties
+  var iFrameObj = document.getElementById("my-iframe");
+  iFrameObj.src = "data:text/html;charset=utf-8," + encodeURI(payload);
+}

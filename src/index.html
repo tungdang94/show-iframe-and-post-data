@@ -15,21 +15,27 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
 
-    <title>Sacombank Subscription Testing!</title>
+    <title>Show iFrame And Post Data To Server!</title>
   </head>
   <body>
-    <div class="container">
-      <h4>Sacombank Subscription Testing!</h4>
+    <div class="container" id="wrapper">
+      <h4>Show iFrame And Post Data To Server!</h4>
 
       <form>
         <div class="form-group">
-          <label for="request">Example request</label>
-          <textarea class="form-control" id="request" rows="10"></textarea>
+          <label for="payload">Example request</label>
+          <textarea class="form-control" id="payload" rows="10"></textarea>
         </div>
 
         <div class="form-group">
-          <button id="btn-link-bank" type="button" class="btn btn-primary">
+          <button
+            id="btn-link-bank"
+            type="button"
+            class="btn btn-primary"
+            onclick="createIframe()"
+          >
             Link Bank
           </button>
         </div>
