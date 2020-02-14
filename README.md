@@ -3,7 +3,7 @@
 ## How to run
 
 ```shell
-cd .../sacombank-testing
+cd .../show-iframe-and-post-data
 npm install
 npm start
 ```
