@@ -1,6 +1,7 @@
 function createIframe() {
   var payload = document.getElementById("payload").value;
-  payload = payload.replace(/\\r\\n/g, "");
+  payload = payload.replace(/\\r/g, "");
+  payload = payload.replace(/\\n/g, "");
   payload = payload.replace(/\\/g, "");
 
   // Initial iframe
